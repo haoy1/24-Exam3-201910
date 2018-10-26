@@ -90,6 +90,7 @@ def problem1(numbers):
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
     answer = 0
+
     for k in range(len(numbers)//3):
         answer = answer + numbers[k + len(numbers)//3]
 
