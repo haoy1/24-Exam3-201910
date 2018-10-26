@@ -89,7 +89,7 @@ def problem2(sequence):
       :type sequence [list]
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
     index = 0
@@ -104,7 +104,7 @@ def problem2(sequence):
     for k in range(len(test_sequence) - 1):
         if test_sequence[k + 1] > test_sequence[index]:
             index = k + 1
-            
+
     return index
 
 ###############################################################################
