@@ -2,13 +2,12 @@
 Exam 3, problem 2.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  October 2018.
+         their colleagues and Brandon Hao.  October 2018.
 
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
-
 
 def main():
     """ Calls the   TEST   functions in this module. """
@@ -93,7 +92,20 @@ def problem2(sequence):
     # TODO: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+    index = 0
+    if len(sequence) == 1:
+        return 0
 
+    test_sequence = sequence
+    for k in range(len(sequence)):
+        if test_sequence[k] < 0:
+            test_sequence[k] = 0 - test_sequence[k]
+
+    for k in range(len(test_sequence) - 1):
+        if test_sequence[k + 1] > test_sequence[index]:
+            index = k + 1
+            
+    return index
 
 ###############################################################################
 # Our tests use the following to print error messages in red.
