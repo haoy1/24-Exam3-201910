@@ -105,7 +105,7 @@ And this one for n=14:
 
         else:
             for i in range(n - k):
-                print(n - i, end='')
+                print(n - i - k, end='')
 
         print()
 
